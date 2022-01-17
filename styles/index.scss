@@ -1,0 +1,100 @@
+@import "_colors.scss";
+@import "_gradients.scss";
+@import "_media-query.scss";
+//! Usar o _ antes do nome do arquivo no SASS significa utilizar uma funcionalidade chamada Partials
+//* Quando usa essa funcionalidade, não é gerado um arquivo .css ou map desse mesmo arquivo ao compilar.
+
+
+//? @Functions
+//* São formas de criar funções no SASS e sempre devem retornar um valor, por padrão existem muitas funções prontas ja do SASS
+//! Olhar documentação.
+
+@function grid($col, $total: 12){
+  @return ($col / $total) * 100%;
+}
+
+//! Grid de 12 -> Classes grid container
+//! Classes GRID - Item que ocupam espaços diferentes em um Grid container
+
+div {
+  width: grid(3);
+}
+
+$theme: dark;
+
+//? Estruturas de repetição
+//* Funcionam de forma parecida á da linguagem de programação.
+//* É possivel criar classes dinâmicas com o valor atual da repetição, porém para que o SASS entenda que é para por o valor da variavel no nome
+//* Se torna necessário colocar o #{variavel} para que seja gerado classes diferentes.
+
+//! Também temos o each que funciona para arrays/listas
+//! E também o while, que funciona de forma similar. De acordo com a documentação, é recomendado usar junto a @functions
+//! E para estruturas mais complexas
+
+
+@for $i from 1 through 10 {
+  .teste-#{i}{
+    width: 100vw;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  //? Estruturas condicionais
+  //* Para utilizar basta colocar o @if ou @else, ou até mesmo @else if igual ao feito em qualquer linguagem de programação.
+  //! No exemplo a seguir, a depender do nome da variavel $theme, mudamos a tematica para light ou dark.
+  @if $theme == dark {
+    background: $black;
+    color: $white;
+  }
+  @else if $theme == light {
+    background: $white;
+    color: $black;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+
+  span{
+    color: $red;
+  }
+}
+
+
+.teste {
+  background: $gradient-pink-purple;
+  color: $white;
+  padding: 10px;
+  border: 3px solid green;
+
+
+// @include responsive-medium {
+//   border: 3px solid yellow;
+// }
+
+// @include responsive-large{
+//   border: 3px solid blue;
+// }
+
+// @include responsive-x-large {
+//   border: 3px solid gray;
+// }
+}
+
+
+button {
+  cursor: pointer;
+}
