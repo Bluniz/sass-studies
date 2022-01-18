@@ -79,8 +79,18 @@ button {
 .main--grid__container {
   max-width: 1200px;
   width: 1200px;
-  margin: 48px auto;
+  margin: 0 auto;
   border: 1px solid #ccc;
+  min-width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.4rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -104,13 +114,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-1 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -119,13 +136,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-2 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -134,13 +158,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-3 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -149,13 +180,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-4 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -164,13 +202,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-5 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -179,13 +224,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-6 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -194,13 +246,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-7 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -209,13 +268,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-8 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -224,13 +290,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-9 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -239,13 +312,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-10 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -254,13 +334,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-11 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 
@@ -269,13 +356,20 @@ button {
   margin: 12px;
   border: 1px solid #F80B8E;
   height: 50px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 960px) {
   .main--grid__item-12 {
     width: calc(100% - 24px);
-    display: block;
   }
 }
 /*# sourceMappingURL=index.css.map */

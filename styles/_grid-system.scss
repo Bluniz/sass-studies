@@ -15,12 +15,16 @@
       border: 1px solid $pink;
       height: 50px;
       //! @melhoria
-      display: inline-block;
+      //display: inline-block;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @include responsive(sm){
         width: calc(100% - #{$gutter});
         //! @melhoria
-        display: block;
+        //display: block;
       }
     }
   }
@@ -30,8 +34,16 @@
   .#{$name}--grid__container {
     max-width: $size;
     width: $size;
-    margin: 48px auto;
+    margin: 0 auto;
     border: 1px solid $gray;
+    min-width: 30rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2.4rem;
+
+    
 
     @include responsive(sm){
       border: 10px solid yellow;
