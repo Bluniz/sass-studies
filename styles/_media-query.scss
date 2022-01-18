@@ -1,10 +1,11 @@
 @import '_breakpoints.scss';
+@import '_sizes.scss';
 
 
 @mixin responsive($size) {
 
   //* Small
-  @if size == sm {
+  @if $size == sm {
     //! Tamanho Máximo da tela = tamanho definido para medium
     @media screen and (max-width: $medium) {
       @content;
@@ -12,7 +13,7 @@
   }
 
   //* Medium
-  @else if size == md {
+  @else if $size == md {
     //! Tamanho minimo = tamaho definido para medio
     //! Tamaho máximo = tamanho definido para large
     @media screen and (min-width: $medium) and (max-width: $large){
@@ -21,7 +22,7 @@
   }
 
   //* Large
-  @else if size == lg {
+  @else if $size == lg {
     //! Tamanho minimo = tamanho definido para large 
     //! Tamanho máximo = tamanho definido para extra-large
     @media screen and (max-width: $x-large) and (min-width: $large){
@@ -30,14 +31,14 @@
   }
 
   //* Extra large
-  @else if size == xl {
+  @else if $size == xl {
     //! Tamanho minimo = tamanho definido para extra-large
     @media screen and (min-width: $x-large){
       @content;
     }
   }
   //* Extra small
-  @else if size == xs {
+  @else if $size == xs {
     //! Tamanho máximo = tamanho definido para small
     @media screen and (max-width: $small){
       @content;
@@ -46,43 +47,4 @@
   
 }
 
-$container: 1200px;
-$gutter: 24px;
 
-.container {
-  max-width: $container;
-  margin: 48px auto;
-  padding: 48px 16px;
-  
-  border: 1px solid red;
-}
-
-@function grid($col, $total: 12) {
-  @return ($col / $total) * 100%;
-}
-
-
-@for $i from 1 through 12 {
-  .grid-#{$i} {
-    width: calc(#{grid($i)} - #{$gutter});
-    margin: $gutter / 2;
-    background: gray;
-    border: 1px solid green;
-    height: 50px;
-
-
-    //! Existem casos do elemento pai perder a referencia de tamanho
-    float: left;
-    //! Clearfix 
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-
-    @include responsive(s){
-      width: calc(100% - #{$gutter});
-      float: none;
-    }
-  }
-}

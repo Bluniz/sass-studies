@@ -1,6 +1,7 @@
 @import "_colors.scss";
 @import "_gradients.scss";
 @import "_media-query.scss";
+@import "_grid-system.scss";
 //! Usar o _ antes do nome do arquivo no SASS significa utilizar uma funcionalidade chamada Partials
 //* Quando usa essa funcionalidade, não é gerado um arquivo .css ou map desse mesmo arquivo ao compilar.
 
@@ -9,16 +10,8 @@
 //* São formas de criar funções no SASS e sempre devem retornar um valor, por padrão existem muitas funções prontas ja do SASS
 //! Olhar documentação.
 
-@function grid($col, $total: 12){
-  @return ($col / $total) * 100%;
-}
-
 //! Grid de 12 -> Classes grid container
 //! Classes GRID - Item que ocupam espaços diferentes em um Grid container
-
-div {
-  width: grid(3);
-}
 
 $theme: dark;
 
@@ -66,14 +59,6 @@ body {
   flex-direction: column;
 }
 
-h1 {
-
-  span{
-    color: $red;
-  }
-}
-
-
 .teste {
   background: $gradient-pink-purple;
   color: $white;
@@ -93,8 +78,9 @@ h1 {
 //   border: 3px solid gray;
 // }
 }
-
-
 button {
   cursor: pointer;
 }
+
+@include generateGridContainer(main);
+@include generateGridItems(12, main);
